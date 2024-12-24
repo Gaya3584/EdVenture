@@ -1,0 +1,71 @@
+/* Activities Section Styles */
+.activities-section {
+  padding: 50px 20px;
+  background-color: #f4f4f4;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.activities-section h3 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* Slider Container */
+.slider-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Slider (holding all activities) */
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out; /* Smooth scrolling transition */
+}
+
+.activity {
+  flex-shrink: 0; /* Prevent shrinking */
+  width: 200px;
+  text-align: center;
+  margin: 0 80px;  /* Increased margin for more spacing */
+}
+
+.activity img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.activity p {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #333;
+}
+
+/* Slider Buttons */
+.slider-button {
+  position: absolute;
+  top: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  font-size: 30px;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.left {
+  left: 10px;
+}
+
+.right {
+  right: 10px;
+}
+
+.slider-button:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}

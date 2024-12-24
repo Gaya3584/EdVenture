@@ -1,10 +1,17 @@
 import './App.css';
-
+import Nav from './components/nav';
+import Cont from './components/cont';
+import Act from './components/act';
+import Try from './components/try';
+import Foot from './components/footer';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-      </header>
+    <div>
+      <Nav /> 
+      <Cont/>
+      <Act/>
+      <Try/>
+      <Foot/>
     </div>
   );
 }
