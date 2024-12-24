@@ -33,7 +33,7 @@ const Act = () => {
 
   return (
     <div className="activities-section">
-      <h3>Our Activities</h3>
+      <h3 className="act-head">Our Activities</h3>
       <div className="slider-container">
         {/* Left Button */}
         <button

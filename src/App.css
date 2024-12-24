@@ -14,29 +14,66 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #333;
+  background: linear-gradient(135deg, #311038, #1e3d58); /* Ash to blue */
   padding: 30px 30px;
   color: white;
+}
+
+.notification-icon {
+  font-size: 24px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.notification-icon:hover {
+  color: #f39c12; /* Optional: Highlight color on hover */
+}
+
+.navbar-heading {
+  font-family: "Anton SC", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 50px;
 }
 
 /* Content Section Styles */
 .content-section {
   padding: 320px 20px;
-  background-color: #f4f4f4; /* Light background color */
+  background: linear-gradient(135deg, #000428, #28313b, #3e1d49);
   text-align: center;
+}
+
+.content-section .content-heading {
+  font-family: "Paprika", serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 2.6; /* Improves readability */
+  color: #fff; /* Adjust color to match your theme */
+  margin: 20px 0; /* Add spacing around the text */
+}
+.activity {
+  background-color: white; /* White background for each activity */
+  color: black; /* Ensure text is visible on white background */
+  padding: 15px;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Activities Section */
 .activities-section {
   padding: 40px 20px;
-  background-color: #f4f4f4;
+  background: linear-gradient(45deg, #000428, #28313b, #3e1d49);
   text-align: center;
 }
 
 .activities-section h2 {
   font-size: 28px;
   margin-bottom: 20px;
-  color: #333;
+  color: #fff; /* Changed to white for better contrast */
+  font-family: "Paprika", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* Activity Divisions */
@@ -49,7 +86,7 @@ body {
 
 .activity-division {
   width: 45%;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.1); /* Slight transparency */
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -59,11 +96,13 @@ body {
 .activity-division h3 {
   font-size: 24px;
   margin-bottom: 10px;
+  color: white; /* Ensures visibility */
+  
 }
 
 .activity-division p {
   font-size: 16px;
-  color: #333;
+  color: #fff; /* Ensures text contrast */
 }
 
 /* Activity List */
@@ -87,12 +126,30 @@ body {
 }
 
 .activity-item p {
-  font-size: 16px;
-  color: #555;
+  font-size: 20px;
+  color: #fff;
+  font-family: "Paprika", serif;
+  font-weight: 400;
+  font-style: normal;
 }
+.actpara
+{
+  font-family: "Paprika", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.act-head {
+  font-family: 'Londrina Sketch', cursive;
+  font-size: 36px;
+  color: #fff;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
 /* Footer Styles */
 .footer {
-  background-color: #333; /* Theme color matching the navbar */
+  background: linear-gradient(135deg, #30113b, #000000);
   color: white;
   text-align: center;
   padding: 20px 10px;
@@ -107,6 +164,9 @@ body {
 .footer h3 {
   font-size: 22px;
   margin-bottom: 10px;
+  font-family: "Paprika", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .social-icons {
@@ -123,13 +183,14 @@ body {
 }
 
 .icon:hover {
-  color: #f39c12; /* Highlight color on hover (optional) */
+  color: #f39c12; /* Highlight color on hover */
 }
+
 /* General 3D Box Styles */
 .box-3d {
   position: absolute;
   transform-style: preserve-3d;
-  background: linear-gradient(145deg, #555, #333);
+  background: linear-gradient(45deg, #000428, #28313b, #000000);
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   display: flex;
@@ -140,23 +201,16 @@ body {
   font-family: 'Arial', sans-serif;
   text-align: center;
   perspective: 1000px;
-}
-
-.box-3d:hover {
-  transition: transform 0.5s ease;
+  margin-top: 40px;
 }
 
 /* Small Box */
 .small-box {
   top: 50%;
-  left: 25%;
+  left: 30%;
   transform: translate(-50%, -50%);
   width: 300px;
   height: 150px;
-}
-
-.small-box:hover {
-  transform: translate(-50%, -50%) rotateY(20deg) rotateX(10deg);
 }
 
 /* Big Box */
@@ -168,16 +222,8 @@ body {
   height: 450px;
 }
 
-.big-box:hover {
-  transform: translate(50%, -50%) rotateY(-20deg) rotateX(-10deg);
-}
-
 /* Quote Styles */
 .quote {
   font-size: 18px;
   padding: 10px;
-}
-
-.big-box .quote {
-  font-size: 24px;
 }
