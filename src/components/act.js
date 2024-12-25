@@ -1,16 +1,24 @@
 import React, { useState } from "react";
 import "./act.css"; // Import the CSS for styling
 
+// Import images
+import MathImage from "./images/maths.png"; // Ensure the correct path and extension
+import ScienceImage from "./images/science.png";
+import KiddoImage from "./images/kids.png";
+import MindCareImage from "./images/mind.png";
+import DrugFreeImage from "./images/drugs.png";
+import SkillSphereImage from "./images/skill.png";
+
 const Act = () => {
   const [currentPage, setCurrentPage] = useState(0); // Track the current page
 
   const activities = [
-    { id: 1, name: "Activity 1", imgSrc: "https://via.placeholder.com/200x150" },
-    { id: 2, name: "Activity 2", imgSrc: "https://via.placeholder.com/200x150" },
-    { id: 3, name: "Activity 3", imgSrc: "https://via.placeholder.com/200x150" },
-    { id: 4, name: "Activity 4", imgSrc: "https://via.placeholder.com/200x150" },
-    { id: 5, name: "Activity 5", imgSrc: "https://via.placeholder.com/200x150" },
-    { id: 6, name: "Activity 6", imgSrc: "https://via.placeholder.com/200x150" }
+    { id: 1, name: "Math Wizards", imgSrc: MathImage },
+    { id: 2, name: "Science Horizons", imgSrc: ScienceImage },
+    { id: 3, name: "KiddoVerse", imgSrc: KiddoImage },
+    { id: 4, name: "MindCare", imgSrc: MindCareImage },
+    { id: 5, name: "DrugFree Future", imgSrc: DrugFreeImage },
+    { id: 6, name: "SkillSphere", imgSrc: SkillSphereImage }
   ];
 
   const itemsPerPage = 3;
@@ -48,7 +56,11 @@ const Act = () => {
         <div className="slider">
           {currentActivities.map((activity) => (
             <div className="activity" key={activity.id}>
-              <img src={activity.imgSrc} alt={activity.name} />
+              <img
+                src={activity.imgSrc}
+                alt={activity.name} // Use activity.name for dynamic alt text
+                style={{ width: "200px", height: "150px" }} // Set image size
+              />
               <p>{activity.name}</p>
             </div>
           ))}
