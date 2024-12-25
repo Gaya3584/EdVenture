@@ -54,7 +54,7 @@ body {
 .activity {
   background-color: white; /* White background for each activity */
   color: black; /* Ensure text is visible on white background */
-  padding: 15px;
+  padding: 0px;
   margin: 10px;
   border-radius: 8px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
