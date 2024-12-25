@@ -227,3 +227,56 @@ body {
   font-size: 18px;
   padding: 10px;
 }
+/* Add this to your existing CSS file */
+
+/* Add this to your existing CSS file */
+
+/* Keyframe animation to move the rocket from the bottom and zoom in */
+@keyframes moveFromBottomZoom {
+  0% {
+    transform: translateY(50px) scale(0.5); /* Start 100px below and scaled down */
+    opacity: 0; /* Initially hidden */
+  }
+  100% {
+    transform: translateY(0) scale(1); /* Move to its original position and normal size */
+    /* Fade in */
+  }
+}
+
+/* Apply the animation to the rocket image */
+.rocket img,.stars img {
+  animation: moveFromBottomZoom 1.5s ease-out forwards; /* Duration: 1.5s, ease-out timing */
+  opacity: 1;
+}
+/* Add these styles to your existing CSS */
+
+/* Content Section Flexbox Layout */
+.content-section {
+  display: flex;
+  justify-content: space-between; /* Space between the left side and the big box */
+  align-items: center; /* Center-aligns the content vertically */
+  padding: 50px 20px; /* Add padding for spacing */
+}
+
+/* Left Side - Rocket and Stars */
+.left-side {
+  
+  flex-direction: column; /* Arrange images vertically */
+  /* Align items to the left */
+}
+
+.rocket, .stars {
+  margin-bottom: 20px; /* Space between the rocket and stars */
+}
+
+/* Optionally, style the rocket and stars images */
+.rocket img {
+  width: 150px; /* Adjust the width as needed */
+  height: auto; /* Maintain the aspect ratio */
+}
+.stars img{
+  width: 800px;
+  height: 450px;
+}
+
+
