@@ -11,6 +11,7 @@ import Miss from "./components/miss";
 import Color from "./components/color";
 import Odd from "./components/odd";
 import Maths from "./components/maths";
+import Science from "./components/science";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
@@ -33,7 +34,7 @@ function App() {
         <Route path="/color" element={<Color/>}/>
         <Route path="/odd" element={<Odd/>}/>
         <Route path="/maths" element={<Maths/>}/>
-
+        <Route path="/science" element={<Science/>}/>
 
       </Routes>
     </Router>

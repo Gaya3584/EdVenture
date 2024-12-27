@@ -47,7 +47,9 @@ const Act = () => {
   const handleMathsClick = () => {
     navigate("/maths"); // Navigate to the Kids page
   };
-
+  const handleScienceClick = () => {
+    navigate("/science"); // Navigate to the Kids page
+  };
   return (
     <div className="activities-section">
       <h3 className="act-head">Our Activities</h3>
@@ -73,6 +75,8 @@ const Act = () => {
               ? handleKiddoClick
               : activity.name === "Math Wizards"
               ? handleMathsClick
+              : activity.name === "Science Horizons"
+              ? handleScienceClick
               : null
               } // Set appropriate navigation handler
               />
