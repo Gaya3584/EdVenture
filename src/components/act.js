@@ -44,6 +44,9 @@ const Act = () => {
   const handleKiddoClick = () => {
     navigate("/kids"); // Navigate to the Kids page
   };
+  const handleMathsClick = () => {
+    navigate("/maths"); // Navigate to the Kids page
+  };
 
   return (
     <div className="activities-section">
@@ -62,12 +65,18 @@ const Act = () => {
         <div className="slider">
           {currentActivities.map((activity) => (
             <div className="activity" key={activity.id}>
-              <img
-                src={activity.imgSrc}
-                alt={activity.name}
-                style={{ width: "200px", height: "150px" }}
-                onClick={activity.name === "KiddoVerse" ? handleKiddoClick : null} // Set image click handler
+              <img src={activity.imgSrc}
+              alt={activity.name}
+              style={{ width: "200px", height: "150px" }}
+              onClick={
+              activity.name === "KiddoVerse"
+              ? handleKiddoClick
+              : activity.name === "Math Wizards"
+              ? handleMathsClick
+              : null
+              } // Set appropriate navigation handler
               />
+
               <p>{activity.name}</p>
             </div>
           ))}

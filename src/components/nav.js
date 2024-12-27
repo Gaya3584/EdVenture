@@ -1,9 +1,17 @@
-import logoImage from './images/logo.png';
+import React from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
+import logoImage from "./images/logo.png";
 
 const Navbar = () => {
+  const navigate = useNavigate(); // Initialize useNavigate
+
+  const handleLogoClick = () => {
+    navigate("/"); // Navigate to the landing page ("/")
+  };
+
   return (
     <nav className="navbar">
-      <div className="logo">
+      <div className="logo" onClick={handleLogoClick}>
         <img src={logoImage} alt="Logo" className="logo-image" /> {/* Image as logo */}
       </div>
       <div className="heading-container">
@@ -14,6 +22,6 @@ const Navbar = () => {
       </div>
     </nav>
   );
-}
+};
 
 export default Navbar;
