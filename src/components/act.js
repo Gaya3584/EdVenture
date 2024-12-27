@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import "./act.css"; // Import the CSS for styling
+import { useNavigate } from 'react-router-dom'; // Use useNavigate hook for navigation
 
 // Import images
-import MathImage from "./images/maths.png"; // Ensure the correct path and extension
+import MathImage from "./images/maths.png";
 import ScienceImage from "./images/science.png";
 import KiddoImage from "./images/kids.png";
 import MindCareImage from "./images/mind.png";
@@ -11,6 +12,7 @@ import SkillSphereImage from "./images/skill.png";
 
 const Act = () => {
   const [currentPage, setCurrentPage] = useState(0); // Track the current page
+  const navigate = useNavigate(); // Use the useNavigate hook
 
   const activities = [
     { id: 1, name: "Math Wizards", imgSrc: MathImage },
@@ -39,6 +41,10 @@ const Act = () => {
     (currentPage + 1) * itemsPerPage
   );
 
+  const handleKiddoClick = () => {
+    navigate("/kids"); // Navigate to the Kids page
+  };
+
   return (
     <div className="activities-section">
       <h3 className="act-head">Our Activities</h3>
@@ -58,8 +64,9 @@ const Act = () => {
             <div className="activity" key={activity.id}>
               <img
                 src={activity.imgSrc}
-                alt={activity.name} // Use activity.name for dynamic alt text
-                style={{ width: "200px", height: "150px" }} // Set image size
+                alt={activity.name}
+                style={{ width: "200px", height: "150px" }}
+                onClick={activity.name === "KiddoVerse" ? handleKiddoClick : null} // Set image click handler
               />
               <p>{activity.name}</p>
             </div>
