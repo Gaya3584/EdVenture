@@ -1,0 +1,44 @@
+.color-match-game {
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .instruction {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+  
+  .color-display {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .options button {
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    transition: transform 0.2s ease;
+  }
+  
+  .options button:hover {
+    transform: scale(1.1);
+  }
+  
+  .feedback {
+    font-size: 24px;
+    margin-top: 20px;
+  }
+  
+  .feedback.correct {
+    color: green;
+  }
+  
+  .feedback.incorrect {
+    color: red;
+  }
+  
